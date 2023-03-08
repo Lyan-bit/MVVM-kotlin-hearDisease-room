@@ -123,7 +123,9 @@ class HeartDiseaseBean(c: Context) {
 	        
 	        errors.clear()
 	        
-          if (id != "") {}
+          if (id != "") {
+	  //ok
+	  }
 	         else {
 	               errors.add("id cannot be empty")
 	         }
@@ -211,9 +213,11 @@ class HeartDiseaseBean(c: Context) {
        errors.clear()
 			
 			if (!allHeartDiseaseids.contains(id)) {
-				errors.add("The id is not exist")
+				errors.add("id is not exist")
 		    }
-          if (id != "") {}
+          if (id != "") {
+	  //ok
+	  }
 	         else {
 	               errors.add("id cannot be empty")
 	         }
@@ -294,7 +298,7 @@ class HeartDiseaseBean(c: Context) {
    fun isDeleteHeartDiseaseError(allHeartDiseaseids: List<String>): Boolean {
         errors.clear()
 			 if (!allHeartDiseaseids.contains(id)) {
-			    errors.add("The id is not exist")
+			    errors.add("id is not exist")
         }
         return errors.size > 0
 		}    
@@ -302,7 +306,7 @@ class HeartDiseaseBean(c: Context) {
    	fun isSearchHeartDiseaseError(allHeartDiseaseages: List<String>): Boolean {
         errors.clear()
         if (!allHeartDiseaseages.contains(age)) {
-            errors.add("The age is not exist")
+            errors.add("age is not exist")
         }
         return errors.size > 0
     }
@@ -310,7 +314,7 @@ class HeartDiseaseBean(c: Context) {
 		fun isSearchHeartDiseaseIdError(allHeartDiseaseIds: List<String>): Boolean {
     	   errors.clear()
    	       if (!allHeartDiseaseIds.contains(id)) {
-    	       errors.add("The id is not exist")
+    	       errors.add("id is not exist")
     	   }
            return errors.size > 0
     }
